@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/RTK-multi-page-from/',
+  base: '/RTK-multi-page-from/', // Correct base path
   esbuild: {
-    loader: 'jsx',
-    include: /src\/.*\.jsx?$/,
+    loader: 'jsx', // Set correct loader for jsx
+    include: /src\/.*\.jsx?$/, // Include all jsx files in src folder
+    exclude: [],
   },
 })
